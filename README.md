@@ -9,6 +9,7 @@
 壁纸自动轮换工具是一款专为 Windows 系统设计的桌面壁纸自动更换软件。它可以在指定日期（默认 2027 年 9 月 1 日）后，按照设定的时间间隔（默认每周）自动更换电脑壁纸，支持顺序轮换和随机轮换两种模式。
 
 程序可以打包为独立的 `.exe` 文件，无需 Python 环境即可运行，并支持开机自启动。
+注：本项目主要用AI制作
 
 ## ✨ 主要功能
 
@@ -35,10 +36,13 @@
 1. 下载 ‘dist’文件夹。
 2. 运行 `install.py`。(很抱歉因为技术原因暂时无法打包成exe，如未安装python或出现问题请看2.5）
 	-2.5其他安装方法：
-	-简单模式：win+r打开运行窗口，输入shell:startup回车在文件夹中创建的‘WallpaperRotator.exe’的快捷方式
-	-高级模式：执行schtasks /create /tn "WallpaperRotator" /tr "**替换为WallpaperRotator.exe的路径**" /sc daily /st 09:00
-3. 将壁纸图片放入程序目录下的 `wallpapers` 文件夹。
-4. 程序会自动添加到开机启动并开始运行。
+	-简单模式：win+r打开运行窗口，输入shell:startup在文件夹中创建的‘WallpaperRotator.exe’的快捷方式
+	-高级模式：执行
+   ```bash
+	schtasks /create /tn "WallpaperRotator" /tr "**替换为WallpaperRotator.exe的路径**" /sc daily /st 09:00
+   ```
+4. 将壁纸图片放入程序目录下的 `wallpapers` 文件夹。
+5. 程序会自动添加到开机启动并开始运行。
 
 ### 方式二：从源码运行
 
